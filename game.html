@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta id="viewpo1rt" content="width=device-width, initial-scale=1.0">
+    <title>Basement Quest</title>
+    <script src="js/game.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/game.css"/>
+    <link rel="favicon" href="img/favicon.ico"/>
+</head>
+<body>
+    <div class="frame_personagem">
+        <div class="arma">
+
+        </div>
+    </div>
+    <div class="frame_inimigo">
+
+    </div>
+    <div class="interface">
+        <div class="lado_personagem">
+            <div>
+                HP
+                <meter value="10" id="hpp" min="0" max="10"></meter>
+            </div>
+            <div>
+                ATK
+                <button onclick="minusatk()" id="signal1">-</button>
+                <input type="radio" disabled checked id="atk1"/>
+                <input type="radio" disabled id="atk2"/>
+                <input type="radio" disabled id="atk3"/>
+                <input type="radio" disabled id="atk4"/>
+                <input type="radio" disabled id="atk5"/>
+                <button onclick="plusatk()" id="signal2">+</button>
+            </div>
+            <div>
+                DEF
+                <button onclick="minusdef()" id="signal3">-</button>
+                <input type="radio" disabled checked id="def1"/>
+                <input type="radio" disabled id="def2"/>
+                <input type="radio" disabled id="def3"/>
+                <input type="radio" disabled id="def4"/>
+                <input type="radio" disabled id="def5"/>
+                <button onclick="plusdef()" id="signal4">+</button>
+            </div>
+            <div>
+                SP
+                <meter value="5 " id="spc" min="0" max="5"></meter>
+            </div>
+            <div id="points">
+                <button onclick="points()">Atribuir pontos</button>
+            </div>
+            <div class="actions">
+                <div>
+                    <button onclick="attack()" id="btatk" disabled class="botao">Ataque</button>
+                </div>
+                <div>
+                    <button onclick="special()" id="btspc" disabled class="botao">Especial</button>
+                </div>
+                <div>
+                    <p id="fb" hidden>Fireball!</p>
+                    <p id="hit" hidden>Acertou!</p>
+                    <p id="miss" hidden>Errou!</p>
+                    <p id="again" hidden>Você reviveu.</p>
+                </div>
+            </div>
+        </div>
+        <div class="lado_inimigo">
+            <div>
+                RATO
+                <meter value="10" id="hpe" min="0" max="10"></meter>
+            </div>
+            <div>
+                <p id="win" hidden>Você ganhou!</p>
+            </div>
+            <div>
+                <p id="loss" hidden>Você perdeu!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
